@@ -6,8 +6,9 @@ import reportWebVitals from './reportWebVitals';
 import {applyMiddleware, compose, createStore} from "redux";
 import {rootReducer} from "./redux/rootReducer";
 import {Provider} from 'react-redux';
+import {forbiddenWordsMiddleware} from "./redux/middleware";
 const store = createStore(rootReducer, compose(
-    applyMiddleware(thunk),
+    applyMiddleware(thunk, forbiddenWordsMiddleware),
     window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 ))
 
