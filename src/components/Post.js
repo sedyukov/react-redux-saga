@@ -1,5 +1,5 @@
 import React from 'react';
-export default ({ post }) => {
+const Post = ({ post }) => {
     return (
         <div className="card">
             <div className="card-body">
@@ -8,3 +8,5 @@ export default ({ post }) => {
         </div>
     )
 }
+
+export default Post
